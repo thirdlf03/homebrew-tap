@@ -3,7 +3,7 @@ cask "kire" do
   name "kire"
   desc "kire - Split long Markdown files at semantic boundaries"
   homepage "https://github.com/thirdlf03/kire"
-  version "0.0.2"
+  version "0.0.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,23 +14,42 @@ cask "kire" do
   on_macos do
     on_intel do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_darwin_amd64.tar.gz"
-      sha256 "9f6d2b3ac6bd46f6bd0510f1fe9aff199f25ed02e84ec202b8cfbfbfdd4b85fb"
+      sha256 "5bbd1bb23bf5be89b9f5a5e52150ece6ffb326d2685a439c742fb69015a39dd6"
     end
     on_arm do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_darwin_arm64.tar.gz"
-      sha256 "389f15c5ac0de63d037e7e4d6390c504182a562f1ac1123ca777edf69c284fc8"
+      sha256 "8db7225fb2c3e205b7f057134bc04af5860981e98649b949ead7b22d01f18491"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_linux_amd64.tar.gz"
-      sha256 "b3f297aad0dff045df23b7a7e2265b3c5d3538dc8aabc5d58fe7b4d60dddef64"
+      sha256 "ae11efb4ccbc0b998c581c3a7ab05aa8f0ede1b4a6b213da0ff0a0b3fc04b172"
     end
     on_arm do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_linux_arm64.tar.gz"
-      sha256 "df76c1b8fa215916ad545351e101d180d8189d88b12b27549712a347404d2c1d"
+      sha256 "21a8f8cb2e4ca30ec1548e5a1d09dae928186309b2bb7a34f87e2fe29bbdbbf1"
     end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/kire"]
+    end
+  end
+
+  caveats do
+    "Shell completion を有効にするには:"
+    ""
+    "  # Bash"
+    "  source <(kire completion bash)"
+    ""
+    "  # Zsh (add to .zshrc)"
+    "  source <(kire completion zsh)"
+    ""
+    "  # Fish"
+    "  kire completion fish | source"
   end
 
   # No zap stanza required
