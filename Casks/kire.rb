@@ -3,7 +3,7 @@ cask "kire" do
   name "kire"
   desc "kire - Split long Markdown files at semantic boundaries"
   homepage "https://github.com/thirdlf03/kire"
-  version "0.0.4"
+  version "0.1.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "kire" do
   on_macos do
     on_intel do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_darwin_amd64.tar.gz"
-      sha256 "8ed781c3553da838214a89bd017da9531a1906e4a41a000e70721ffbfe4fc722"
+      sha256 "583f107aa471d018bea184753c256af1da2b4e4234fadb7abd91c9efe993137f"
     end
     on_arm do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_darwin_arm64.tar.gz"
-      sha256 "c80eeda362e96ead9ccfc0e28de6e8279264677dd9cfc9bc95a38722b926e6b0"
+      sha256 "d0bcfdb026521152f482bed429f616d107f467be3de40d3b428fd8850e6913f8"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_linux_amd64.tar.gz"
-      sha256 "7810c5fb1d9621933490c43b3f57fa9aea961122cbd413b9abc43417cb3e0676"
+      sha256 "2b7e98970f5908ac271abaf4230a0440e59d4ca1fc623ab1e86c35391b2ab3f7"
     end
     on_arm do
       url "https://github.com/thirdlf03/kire/releases/download/v#{version}/kire_#{version}_linux_arm64.tar.gz"
-      sha256 "39150220130061df704525a6e4ca60d2bf4e21da932fe2a0301a49dae9d2f5b5"
+      sha256 "3608a1ae626223191a7bce5603afdfa4aead8e6adf7e53bad97b8b05521a9e2e"
     end
   end
 
