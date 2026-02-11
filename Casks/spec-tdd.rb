@@ -3,7 +3,7 @@ cask "spec-tdd" do
   name "spec-tdd"
   desc "Spec-driven TDD workflow CLI"
   homepage "https://github.com/thirdlf03/spec-tdd"
-  version "0.0.7"
+  version "0.0.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "spec-tdd" do
   on_macos do
     on_intel do
       url "https://github.com/thirdlf03/spec-tdd/releases/download/v#{version}/spec-tdd_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "cac105efddc33596ccd590541dcc42ac4147f37d2bf5fdb9553b2ea7d216c52c"
+      sha256 "f774e3a136a8a61775397f6b264c779e71010024019573782e6f987f10ae05af"
     end
     on_arm do
       url "https://github.com/thirdlf03/spec-tdd/releases/download/v#{version}/spec-tdd_#{version}_Darwin_arm64.tar.gz"
-      sha256 "2cfaaef71026c104bfd7f8fb1a00ae930b1924345de58ed6bca84a401d9e3ea4"
+      sha256 "4d510979c127f852fb0c4ebb7e40575e66c150458609c06cb20f3dd6d938df1d"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/thirdlf03/spec-tdd/releases/download/v#{version}/spec-tdd_#{version}_Linux_x86_64.tar.gz"
-      sha256 "89e759a12205a52efc9144d20a8115bc77ee7cde3f5a4f5a61108b22870ef631"
+      sha256 "c708ef9311ba80925eecc4849d8581c2f09cc2208536ca4632d0eb8a8986aa19"
     end
     on_arm do
       url "https://github.com/thirdlf03/spec-tdd/releases/download/v#{version}/spec-tdd_#{version}_Linux_arm64.tar.gz"
-      sha256 "3757e9085ab3ad44a1fbe31b77f7ff0edfc6647e33b627432e6f86dfd8b650c2"
+      sha256 "30085a0cc8a4f9144b2703ce0e13921eb2e53d8bd2768ddb4c29feba1527b8f9"
     end
   end
 
